@@ -1,0 +1,315 @@
+{
+  "geode": "5.10.1",
+  "gd": {
+    "win": "2.2081"
+  },
+  "id": "author.click-indicator",
+  "name": "Click Indicator",
+  "version": "1.4.0",
+  "developer": "Author",
+  "description": "World-space animated click and hold indicator with six animations, independent hold visuals, displacement trails, per-player colours, rainbow mode, and performance controls.",
+  "tags": ["gameplay", "enhancement"],
+  "settings": {
+
+    "general-title": {
+      "type": "title",
+      "name": "General",
+      "description": "Choose which parts of the indicator are active. Click bursts and hold visuals can now be used independently."
+    },
+    "click-burst-enabled": {
+      "name": "Show Click Bursts",
+      "description": "Show the animated pulse when the jump/action button is pressed. Turn this off for a hold-only setup.",
+      "type": "bool",
+      "default": true
+    },
+    "p1-enabled": {
+      "name": "Player 1",
+      "description": "Enable click and hold indicators for Player 1.",
+      "type": "bool",
+      "default": true
+    },
+    "p2-enabled": {
+      "name": "Player 2",
+      "description": "Enable click and hold indicators for Player 2.",
+      "type": "bool",
+      "default": true
+    },
+
+    "click-title": {
+      "type": "title",
+      "name": "Click Effect",
+      "description": "Appearance of the short-lived press/release animation."
+    },
+    "animation": {
+      "name": "Animation",
+      "description": "Pulse expands, Ripple adds an echo, Implode shrinks, Crosshair adds four direction lines, Diamond uses four straight edges, and Helix uses a rotating arc.",
+      "type": "string",
+      "default": "pulse",
+      "one-of": ["pulse", "ripple", "implode", "crosshair", "diamond", "helix"]
+    },
+    "duration": {
+      "name": "Duration",
+      "description": "How long the main click effect lasts.",
+      "type": "float",
+      "default": 0.35,
+      "min": 0.05,
+      "max": 2.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      }
+    },
+    "scale-end": {
+      "name": "Peak Scale",
+      "description": "Final size of the main ring relative to the base ring size.",
+      "type": "float",
+      "default": 0.75,
+      "min": 0.15,
+      "max": 3.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      }
+    },
+    "opacity": {
+      "name": "Opacity",
+      "type": "float",
+      "default": 0.9,
+      "min": 0.1,
+      "max": 1.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      }
+    },
+    "ring-thickness": {
+      "name": "Ring Thickness",
+      "type": "float",
+      "default": 2.5,
+      "min": 0.5,
+      "max": 8.0,
+      "control": {
+        "slider-step": 0.1,
+        "arrows": false
+      }
+    },
+    "easing": {
+      "name": "Easing",
+      "description": "Linear is constant-speed, Ease Out starts quickly and settles, and Ease In/Out is smoother at both ends.",
+      "type": "string",
+      "default": "ease-out",
+      "one-of": ["linear", "ease-out", "ease-in-out"]
+    },
+    "layer-count": {
+      "name": "Layers",
+      "description": "1 is the lightest. 2 adds a softer ghost ring. 3 adds the short flash layer too.",
+      "type": "int",
+      "default": 3,
+      "min": 1,
+      "max": 3,
+      "control": {
+        "arrows": false,
+        "slider": true
+      }
+    },
+    "additive-blend": {
+      "name": "Additive Glow",
+      "description": "Uses additive blending for brighter overlapping strokes. Performance Mode disables this automatically.",
+      "type": "bool",
+      "default": true
+    },
+    "release-burst": {
+      "name": "Release Burst",
+      "description": "Fire a second click effect when the button is released.",
+      "type": "bool",
+      "default": false,
+      "enable-if": "click-burst-enabled"
+    },
+
+    "hold-title": {
+      "type": "title",
+      "name": "Hold Indicator",
+      "description": "The persistent ring that stays with the player while the button is held."
+    },
+    "hold-enabled": {
+      "name": "Hold Ring",
+      "description": "Keep a ring visible for the entire duration of a hold.",
+      "type": "bool",
+      "default": true
+    },
+    "hold-opacity": {
+      "name": "Hold Opacity",
+      "type": "float",
+      "default": 0.6,
+      "min": 0.1,
+      "max": 1.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      },
+      "enable-if": "hold-enabled"
+    },
+    "hold-thickness": {
+      "name": "Hold Thickness",
+      "type": "float",
+      "default": 2.0,
+      "min": 0.5,
+      "max": 8.0,
+      "control": {
+        "slider-step": 0.1,
+        "arrows": false
+      },
+      "enable-if": "hold-enabled"
+    },
+    "hold-scale": {
+      "name": "Hold Scale",
+      "type": "float",
+      "default": 0.45,
+      "min": 0.1,
+      "max": 3.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      },
+      "enable-if": "hold-enabled"
+    },
+    "hold-follow": {
+      "name": "Follow Player",
+      "description": "When disabled, the hold ring stays at the press position. When enabled, it tracks the player.",
+      "type": "bool",
+      "default": true,
+      "enable-if": "hold-enabled"
+    },
+    "fade-duration": {
+      "name": "Hold Fade Duration",
+      "description": "How long the hold visuals fade after release. This also controls the new hold trail's release fade.",
+      "type": "float",
+      "default": 0.25,
+      "min": 0.05,
+      "max": 2.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      },
+      "enable-if": "hold-enabled || hold-trail-enabled"
+    },
+
+    "trail-title": {
+      "type": "title",
+      "name": "Hold Trail",
+      "description": "Draw a solid, high-opacity line from the exact hold start point to the player's current position. On release it freezes at the end point and fades."
+    },
+    "hold-trail-enabled": {
+      "name": "Show Hold Trail",
+      "description": "Enable the press-to-current displacement line. This can be used without the hold ring.",
+      "type": "bool",
+      "default": false
+    },
+    "hold-trail-opacity": {
+      "name": "Trail Opacity",
+      "type": "float",
+      "default": 0.95,
+      "min": 0.1,
+      "max": 1.0,
+      "control": {
+        "slider-step": 0.01,
+        "arrows": false
+      },
+      "enable-if": "hold-trail-enabled"
+    },
+    "hold-trail-thickness": {
+      "name": "Trail Thickness",
+      "description": "A thicker line is easier to read while moving quickly. 3.5 is intentionally much heavier than the hold ring.",
+      "type": "float",
+      "default": 3.5,
+      "min": 1.0,
+      "max": 12.0,
+      "control": {
+        "slider-step": 0.1,
+        "arrows": false
+      },
+      "enable-if": "hold-trail-enabled"
+    },
+    "hold-trail-start-marker": {
+      "name": "Mark Hold Start",
+      "description": "Draw a small circle at the exact position where the hold began, making the start and end points obvious.",
+      "type": "bool",
+      "default": true,
+      "enable-if": "hold-trail-enabled"
+    },
+
+    "colors-title": {
+      "type": "title",
+      "name": "Colors",
+      "description": "Color sources shared by click effects, hold rings, and hold trails."
+    },
+    "p1-color": {
+      "name": "Player 1 Colour",
+      "type": "rgb",
+      "default": [0, 220, 255]
+    },
+    "p2-color": {
+      "name": "Player 2 Colour",
+      "type": "rgb",
+      "default": [255, 60, 180]
+    },
+    "color-match-player": {
+      "name": "Match Player Colour",
+      "description": "Use the player's current icon colour instead of the chosen Player 1/2 colour.",
+      "type": "bool",
+      "default": false
+    },
+    "rainbow-mode": {
+      "name": "Rainbow Colours",
+      "description": "Choose a rainbow hue at spawn time. This overrides the normal colour settings.",
+      "type": "bool",
+      "default": false
+    },
+    "rainbow-speed": {
+      "name": "Rainbow Speed",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.1,
+      "max": 10.0,
+      "control": {
+        "slider-step": 0.1,
+        "arrows": false
+      },
+      "enable-if": "rainbow-mode"
+    },
+
+    "performance-title": {
+      "type": "title",
+      "name": "Performance",
+      "description": "The renderer now builds ring geometry once and only animates transform/opacity. These settings control the remaining effect cost."
+    },
+    "performance-mode": {
+      "name": "Performance Mode",
+      "description": "Force 16-segment rings, one pulse layer, a 12-effect cap, no Ripple echoes, no release burst, and non-additive blending.",
+      "type": "bool",
+      "default": false
+    },
+    "ring-quality": {
+      "name": "Ring Quality",
+      "description": "Balanced (24) is the recommended default. Higher values only affect geometry created when an effect spawns.",
+      "type": "string",
+      "default": "medium",
+      "one-of": ["low", "medium", "high", "ultra"],
+      "enable-if": "!performance-mode"
+    },
+    "max-active-effects": {
+      "name": "Max Active Effects",
+      "description": "Hard cap for pulse/echo nodes. New effects are skipped once this limit is reached. Performance Mode forces this to 12.",
+      "type": "int",
+      "default": 24,
+      "min": 4,
+      "max": 64,
+      "control": {
+        "slider-step": 1,
+        "arrows": false
+      },
+      "enable-if": "!performance-mode"
+    }
+
+  }
+}

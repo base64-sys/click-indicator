@@ -1,0 +1,869 @@
+2026-10-02T20:20:39.2965849Z Current runner version: '2.337.0'
+2026-10-02T20:20:39.2999439Z ##[group]Runner Image Provisioner
+2026-10-02T20:20:39.3000856Z Hosted Compute Agent
+2026-10-02T20:20:39.3002740Z Version: 20260901.588
+2026-10-02T20:20:39.3003953Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-02T20:20:39.3005228Z Build Date: 2026-09-01T19:56:44Z
+2026-10-02T20:20:39.3006402Z Worker ID: {0804cc7f-d236-4a25-aacc-1ab5d5fabc2f}
+2026-10-02T20:20:39.3007685Z Azure Region: westcentralus
+2026-10-02T20:20:39.3008675Z ##[endgroup]
+2026-10-02T20:20:39.3011814Z ##[group]Operating System
+2026-10-02T20:20:39.3012875Z Microsoft Windows Server 2025
+2026-10-02T20:20:39.3013782Z 10.0.26100
+2026-10-02T20:20:39.3014583Z Datacenter
+2026-10-02T20:20:39.3015389Z ##[endgroup]
+2026-10-02T20:20:39.3016826Z ##[group]Runner Image
+2026-10-02T20:20:39.3017788Z Image: windows-2025-vs2026
+2026-10-02T20:20:39.3018714Z Version: 20260925.250.1
+2026-10-02T20:20:39.3021494Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-02T20:20:39.3024484Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-02T20:20:39.3026224Z ##[endgroup]
+2026-10-02T20:20:39.3027457Z ##[group]GITHUB_TOKEN Permissions
+2026-10-02T20:20:39.3029355Z Contents: read
+2026-10-02T20:20:39.3030376Z Metadata: read
+2026-10-02T20:20:39.3031253Z Packages: read
+2026-10-02T20:20:39.3032175Z ##[endgroup]
+2026-10-02T20:20:39.3034975Z Secret source: Actions
+2026-10-02T20:20:39.3036481Z Cache mode: write
+2026-10-02T20:20:39.3037556Z Prepare workflow directory
+2026-10-02T20:20:39.3621887Z Prepare all required actions
+2026-10-02T20:20:39.3698631Z Getting action download info
+2026-10-02T20:20:39.7195862Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-02T20:20:39.8813482Z Download action repository 'geode-sdk/build-geode-mod@main' (SHA:e26ece68d56a3cfa0a7f790d8120c965008c3d08)
+2026-10-02T20:20:40.1632669Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-02T20:20:40.5609111Z Getting action download info
+2026-10-02T20:20:40.7774400Z Download action repository 'robinraju/release-downloader@v1.13' (SHA:28fc21f50d76778e7023361aa1f863e717d3d56f)
+2026-10-02T20:20:41.3718485Z Download action repository 'hendrikmuhs/ccache-action@v1.2.23' (SHA:d62db5f07c26379fc4b4e0916f098a92573c3b03)
+2026-10-02T20:20:41.8467442Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-10-02T20:20:41.9985789Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-02T20:20:42.0995958Z Download action repository 'geode-sdk/cli@main' (SHA:f5d228da3891d1f1230b0f4a9442d644bb553d60)
+2026-10-02T20:20:42.4456702Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-10-02T20:20:42.5878621Z Getting action download info
+2026-10-02T20:20:42.7758491Z Complete job name: Windows (Win32 – GD 2.2)
+2026-10-02T20:20:42.9519960Z ##[group]Run actions/checkout@v4
+2026-10-02T20:20:42.9521091Z with:
+2026-10-02T20:20:42.9521460Z   repository: base64-sys/click-indicator
+2026-10-02T20:20:42.9525665Z   token: ***
+2026-10-02T20:20:42.9526508Z   ssh-strict: true
+2026-10-02T20:20:42.9526828Z   ssh-user: git
+2026-10-02T20:20:42.9527145Z   persist-credentials: true
+2026-10-02T20:20:42.9527485Z   clean: true
+2026-10-02T20:20:42.9527788Z   sparse-checkout-cone-mode: true
+2026-10-02T20:20:42.9528148Z   fetch-depth: 1
+2026-10-02T20:20:42.9528491Z   fetch-tags: false
+2026-10-02T20:20:42.9528932Z   show-progress: true
+2026-10-02T20:20:42.9529228Z   lfs: false
+2026-10-02T20:20:42.9529511Z   submodules: false
+2026-10-02T20:20:42.9529813Z   set-safe-directory: true
+2026-10-02T20:20:42.9530150Z   allow-unsafe-pr-checkout: false
+2026-10-02T20:20:42.9531042Z ##[endgroup]
+2026-10-02T20:20:43.1507707Z Syncing repository: base64-sys/click-indicator
+2026-10-02T20:20:43.1513850Z ##[group]Getting Git version info
+2026-10-02T20:20:43.1514888Z Working directory is 'D:\a\click-indicator\click-indicator'
+2026-10-02T20:20:43.2793405Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-02T20:20:43.8046138Z git version 2.55.0.windows.5
+2026-10-02T20:20:43.8117840Z ##[endgroup]
+2026-10-02T20:20:43.8139344Z Temporarily overriding HOME='D:\a\_temp\76f5f663-8852-4b6c-9704-853b5343938d' before making global git config changes
+2026-10-02T20:20:43.8141310Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-02T20:20:43.8152141Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\click-indicator\click-indicator
+2026-10-02T20:20:43.9790444Z Deleting the contents of 'D:\a\click-indicator\click-indicator'
+2026-10-02T20:20:43.9797858Z ##[group]Initializing the repository
+2026-10-02T20:20:43.9809666Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\click-indicator\click-indicator
+2026-10-02T20:20:44.2085898Z Initialized empty Git repository in D:/a/click-indicator/click-indicator/.git/
+2026-10-02T20:20:44.2172161Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/base64-sys/click-indicator
+2026-10-02T20:20:44.4472479Z ##[endgroup]
+2026-10-02T20:20:44.4473395Z ##[group]Disabling automatic garbage collection
+2026-10-02T20:20:44.4483947Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-02T20:20:44.5638653Z ##[endgroup]
+2026-10-02T20:20:44.5657512Z ##[group]Setting up auth
+2026-10-02T20:20:44.5664118Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-02T20:20:44.7079429Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-02T20:20:47.0352181Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-02T20:20:47.1390275Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-02T20:20:47.9548803Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-02T20:20:47.9875497Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-02T20:20:48.5303700Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-02T20:20:48.5614692Z ##[endgroup]
+2026-10-02T20:20:48.5615478Z ##[group]Fetching the repository
+2026-10-02T20:20:48.5631307Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +61be3391945da0721c34aaaa54462aee668005fa:refs/remotes/origin/main
+2026-10-02T20:20:49.8182531Z From https://github.com/base64-sys/click-indicator
+2026-10-02T20:20:49.8183301Z  * [new ref]         61be3391945da0721c34aaaa54462aee668005fa -> origin/main
+2026-10-02T20:20:49.8237680Z ##[endgroup]
+2026-10-02T20:20:49.8238366Z ##[group]Determining the checkout info
+2026-10-02T20:20:49.8241316Z ##[endgroup]
+2026-10-02T20:20:49.8256834Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-02T20:20:49.8697837Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-02T20:20:49.9010275Z ##[group]Checking out the ref
+2026-10-02T20:20:49.9017721Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-02T20:20:49.9586628Z Switched to a new branch 'main'
+2026-10-02T20:20:49.9649046Z branch 'main' set up to track 'origin/main'.
+2026-10-02T20:20:49.9696231Z ##[endgroup]
+2026-10-02T20:20:50.0111129Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-02T20:20:50.0389796Z 61be3391945da0721c34aaaa54462aee668005fa
+2026-10-02T20:20:50.1110114Z ##[group]Run geode-sdk/build-geode-mod@main
+2026-10-02T20:20:50.1110492Z with:
+2026-10-02T20:20:50.1110680Z   sdk: latest
+2026-10-02T20:20:50.1110927Z   build-config: Release
+2026-10-02T20:20:50.1111133Z   cli: latest
+2026-10-02T20:20:50.1111313Z   path: ./
+2026-10-02T20:20:50.1111481Z   combine: false
+2026-10-02T20:20:50.1111709Z   bindings: geode-sdk/bindings
+2026-10-02T20:20:50.1111973Z   android-min-sdk: 23
+2026-10-02T20:20:50.1112181Z   ccache-variant: default
+2026-10-02T20:20:50.1112395Z   use-cpm-cache: true
+2026-10-02T20:20:50.1112600Z   export-pdb: false
+2026-10-02T20:20:50.1112799Z   export-debug: false
+2026-10-02T20:20:50.1113244Z   use-lto: true
+2026-10-02T20:20:50.1113431Z   bundle-pdb: false
+2026-10-02T20:20:50.1113645Z   export-symbols: false
+2026-10-02T20:20:50.1114087Z ##[endgroup]
+2026-10-02T20:20:50.1183273Z ##[start-action display=Detect platform;id=build.platform]
+2026-10-02T20:20:50.1368777Z ##[group]Run DEFAULT_TARGET=Win64
+2026-10-02T20:20:50.1369213Z [36;1mDEFAULT_TARGET=Win64[0m
+2026-10-02T20:20:50.1369467Z [36;1mDEFAULT_CCACHE=sccache[0m
+2026-10-02T20:20:50.1369734Z [36;1mif [ "$RUNNER_OS" = "Linux" ]; then[0m
+2026-10-02T20:20:50.1370009Z [36;1m  ID=linux[0m
+2026-10-02T20:20:50.1370212Z [36;1m  DEFAULT_TARGET=Android64[0m
+2026-10-02T20:20:50.1370787Z [36;1melif [ "$RUNNER_OS" = "Windows" ]; then[0m
+2026-10-02T20:20:50.1371055Z [36;1m  ID=win[0m
+2026-10-02T20:20:50.1371241Z [36;1m  DEFAULT_TARGET=Win64[0m
+2026-10-02T20:20:50.1371495Z [36;1melif [ "$RUNNER_OS" = "macOS" ]; then[0m
+2026-10-02T20:20:50.1371977Z [36;1m  ID=mac[0m
+2026-10-02T20:20:50.1372190Z [36;1m  DEFAULT_TARGET=MacOS[0m
+2026-10-02T20:20:50.1372416Z [36;1m  DEFAULT_CCACHE=[0m
+2026-10-02T20:20:50.1372618Z [36;1mfi[0m
+2026-10-02T20:20:50.1372865Z [36;1m[0m
+2026-10-02T20:20:50.1373064Z [36;1mCCACHE_VARIANT=default[0m
+2026-10-02T20:20:50.1373326Z [36;1mif [ "$CCACHE_VARIANT" = "default" ]; then[0m
+2026-10-02T20:20:50.1373642Z [36;1m  CCACHE_VARIANT=$DEFAULT_CCACHE[0m
+2026-10-02T20:20:50.1373904Z [36;1mfi[0m
+2026-10-02T20:20:50.1374063Z [36;1m[0m
+2026-10-02T20:20:50.1374218Z [36;1mTARGET=[0m
+2026-10-02T20:20:50.1374407Z [36;1mif [ "$TARGET" = "" ]; then[0m
+2026-10-02T20:20:50.1374655Z [36;1m  TARGET=$DEFAULT_TARGET[0m
+2026-10-02T20:20:50.1374875Z [36;1mfi[0m
+2026-10-02T20:20:50.1375032Z [36;1m[0m
+2026-10-02T20:20:50.1375219Z [36;1mif [ "$TARGET" = "Android32" ]; then[0m
+2026-10-02T20:20:50.1375489Z [36;1m  OUTPUT_ID=android32[0m
+2026-10-02T20:20:50.1375738Z [36;1melif [ "$TARGET" = "Android64" ]; then[0m
+2026-10-02T20:20:50.1376018Z [36;1m  OUTPUT_ID=android64[0m
+2026-10-02T20:20:50.1376259Z [36;1melif [ "$TARGET" = "Win64" ]; then[0m
+2026-10-02T20:20:50.1376515Z [36;1m  OUTPUT_ID=win[0m
+2026-10-02T20:20:50.1376745Z [36;1melif [ "$TARGET" = "MacOS" ]; then[0m
+2026-10-02T20:20:50.1377010Z [36;1m  OUTPUT_ID=mac[0m
+2026-10-02T20:20:50.1377229Z [36;1melif [ "$TARGET" = "iOS" ]; then[0m
+2026-10-02T20:20:50.1377477Z [36;1m  OUTPUT_ID=ios[0m
+2026-10-02T20:20:50.1377671Z [36;1mfi[0m
+2026-10-02T20:20:50.1377828Z [36;1m[0m
+2026-10-02T20:20:50.1378010Z [36;1mecho "id=$ID" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:50.1378292Z [36;1mecho "target=$TARGET" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:50.1378611Z [36;1mecho "target_id=$OUTPUT_ID" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:50.1378974Z [36;1mecho "ccache_variant=$CCACHE_VARIANT" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:50.1403892Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:20:50.1404372Z ##[endgroup]
+2026-10-02T20:20:50.2931310Z ##[end-action id=build.platform;outcome=success;conclusion=success;duration_ms=174]
+2026-10-02T20:20:50.2936294Z ##[start-action display=Download custom sccache;id=build.__robinraju_release-downloader]
+2026-10-02T20:20:50.2956766Z ##[end-action id=build.__robinraju_release-downloader;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:20:50.2960738Z ##[start-action display=Setup custom sccache;id=build.__run]
+2026-10-02T20:20:50.2966356Z ##[end-action id=build.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:20:50.2968308Z ##[start-action display=Setup sccache;id=build.__hendrikmuhs_ccache-action]
+2026-10-02T20:20:50.3203310Z ##[group]Run hendrikmuhs/ccache-action@v1.2.23
+2026-10-02T20:20:50.3203613Z with:
+2026-10-02T20:20:50.3203835Z   variant: sccache
+2026-10-02T20:20:50.3204017Z   key: win-v1
+2026-10-02T20:20:50.3204184Z   restore: true
+2026-10-02T20:20:50.3204358Z   max-size: 500MB
+2026-10-02T20:20:50.3204532Z   verbose: 0
+2026-10-02T20:20:50.3204691Z   save: true
+2026-10-02T20:20:50.3204868Z   append-timestamp: true
+2026-10-02T20:20:50.3205087Z   create-symlink: false
+2026-10-02T20:20:50.3205331Z   job-summary: CCache Statistics
+2026-10-02T20:20:50.3205574Z   update-package-index: false
+2026-10-02T20:20:50.3205788Z   install: detect
+2026-10-02T20:20:50.3205969Z ##[endgroup]
+2026-10-02T20:20:50.4759652Z ##[group]Install sccache
+2026-10-02T20:20:50.7822489Z [command]"C:\Program Files\Git\bin\sh.exe" -xc "curl -L 'https://github.com/mozilla/sccache/releases/download/v0.14.0/sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz' -o 'C:\Users\RUNNER~1\AppData\Local\Temp\ccachey489RA\sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz'"
+2026-10-02T20:20:50.8417702Z + curl -L https://github.com/mozilla/sccache/releases/download/v0.14.0/sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz -o 'C:\Users\RUNNER~1\AppData\Local\Temp\ccachey489RA\sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz'
+2026-10-02T20:20:51.0220485Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+2026-10-02T20:20:51.0221370Z                                  Dload  Upload  Total   Spent   Left   Speed
+2026-10-02T20:20:51.0221855Z 
+2026-10-02T20:20:51.0670597Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:51.0672780Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:51.0673840Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:51.5109534Z 
+2026-10-02T20:20:51.6944894Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:51.6949328Z 100  7.45M 100  7.45M   0      0  9.42M      0                              0
+2026-10-02T20:20:51.6950290Z 100  7.45M 100  7.45M   0      0  9.42M      0                              0
+2026-10-02T20:20:51.6951110Z 100  7.45M 100  7.45M   0      0  9.42M      0                              0
+2026-10-02T20:20:51.7929067Z [command]"C:\Program Files\Git\bin\sh.exe" -xc "tar xf \"$(cygpath -u C:/Users/RUNNER~1/AppData/Local/Temp/ccachey489RA/sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz)\" -O 'sccache-v0.14.0-x86_64-pc-windows-msvc/sccache.exe' > 'C:\Users\runneradmin\.cargo\bin\sccache.exe'"
+2026-10-02T20:20:51.8466142Z ++ cygpath -u C:/Users/RUNNER~1/AppData/Local/Temp/ccachey489RA/sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz
+2026-10-02T20:20:51.9253452Z + tar xf /tmp/ccachey489RA/sccache-v0.14.0-x86_64-pc-windows-msvc.tar.gz -O sccache-v0.14.0-x86_64-pc-windows-msvc/sccache.exe
+2026-10-02T20:20:52.2525843Z [command]"C:\Program Files\Git\bin\sh.exe" -xc "chmod +x 'C:\Users\runneradmin\.cargo\bin\sccache.exe'"
+2026-10-02T20:20:52.2889946Z + chmod +x 'C:\Users\runneradmin\.cargo\bin\sccache.exe'
+2026-10-02T20:20:52.4629831Z sccache installed at C:\Users\runneradmin\.cargo\bin\sccache.exe
+2026-10-02T20:20:52.4630710Z ##[endgroup]
+2026-10-02T20:20:52.4631090Z ##[group]Restore cache
+2026-10-02T20:20:52.7985989Z Cache hit for restore-key: sccache-win-v1-2026-10-02T19:45:39.316Z
+2026-10-02T20:20:54.0378968Z Received 75497472 of 129483824 (58.3%), 70.7 MBs/sec
+2026-10-02T20:20:54.4196323Z Received 129483824 of 129483824 (100.0%), 88.1 MBs/sec
+2026-10-02T20:20:54.4199141Z Cache Size: ~123 MB (129483824 B)
+2026-10-02T20:20:54.4260804Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/81e8f708-cb69-4f91-b19c-e83152d92774/cache.tzst -P -C D:/a/click-indicator/click-indicator --force-local --use-compress-program "zstd -d"
+2026-10-02T20:20:54.7444283Z Cache restored successfully
+2026-10-02T20:20:54.7523860Z Restored from cache key "sccache-win-v1-2026-10-02T19:45:39.316Z".
+2026-10-02T20:20:54.7525506Z ##[endgroup]
+2026-10-02T20:20:54.7525906Z ##[group]Configure sccache, win32
+2026-10-02T20:20:54.8299212Z [command]"C:\Program Files\Git\bin\sh.exe" -xc "env SCCACHE_IDLE_TIMEOUT=0 SCCACHE_DIR='D:\a\click-indicator\click-indicator\.sccache' SCCACHE_CACHE_SIZE='500MB' sccache --start-server"
+2026-10-02T20:20:54.8643999Z + env SCCACHE_IDLE_TIMEOUT=0 'SCCACHE_DIR=D:\a\click-indicator\click-indicator\.sccache' SCCACHE_CACHE_SIZE=500MB sccache --start-server
+2026-10-02T20:20:54.9177471Z sccache: Starting the server...
+2026-10-02T20:20:54.9439820Z sccache: Listening on address 127.0.0.1:4226
+2026-10-02T20:20:55.0419159Z [command]"C:\Program Files\Git\bin\sh.exe" -xc "sccache -z"
+2026-10-02T20:20:55.0768099Z + sccache -z
+2026-10-02T20:20:55.0943782Z Statistics zeroed.
+2026-10-02T20:20:55.1004715Z ##[endgroup]
+2026-10-02T20:20:55.1175526Z ##[end-action id=build.__hendrikmuhs_ccache-action;outcome=success;conclusion=success;duration_ms=4820]
+2026-10-02T20:20:55.1178331Z ##[start-action display=Setup CPM Cache;id=build.__actions_cache]
+2026-10-02T20:20:55.3087451Z ##[group]Run actions/cache@v6
+2026-10-02T20:20:55.3087681Z with:
+2026-10-02T20:20:55.3087903Z   path: D:\a\click-indicator\click-indicator/cpm-cache
+2026-10-02T20:20:55.3088372Z   key: cpm-win-v1-e086261d6df70e799d72c89c639c81dd8aff17f23cbb15918bed3539eb72c8bc
+2026-10-02T20:20:55.3088824Z   restore-keys: cpm-win-v1-
+
+2026-10-02T20:20:55.3089068Z   enableCrossOsArchive: false
+2026-10-02T20:20:55.3089298Z   fail-on-cache-miss: false
+2026-10-02T20:20:55.3089536Z   lookup-only: false
+2026-10-02T20:20:55.3089727Z   save-always: false
+2026-10-02T20:20:55.3089912Z ##[endgroup]
+2026-10-02T20:20:55.7499930Z Cache hit for: cpm-win-v1-e086261d6df70e799d72c89c639c81dd8aff17f23cbb15918bed3539eb72c8bc
+2026-10-02T20:20:56.6007206Z Received 21260780 of 21260780 (100.0%), 32.7 MBs/sec
+2026-10-02T20:20:56.6009364Z Cache Size: ~20 MB (21260780 B)
+2026-10-02T20:20:56.6038490Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/815ba8ed-52fe-4ed3-8391-294f17f49bbd/cache.tzst -P -C D:/a/click-indicator/click-indicator --force-local --use-compress-program "zstd -d"
+2026-10-02T20:20:56.9262668Z Cache restored successfully
+2026-10-02T20:20:56.9396992Z Cache restored from key: cpm-win-v1-e086261d6df70e799d72c89c639c81dd8aff17f23cbb15918bed3539eb72c8bc
+2026-10-02T20:20:56.9514018Z ##[end-action id=build.__actions_cache;outcome=success;conclusion=success;duration_ms=1833]
+2026-10-02T20:20:56.9517303Z ##[start-action display=Install Ninja;id=build.__run_2]
+2026-10-02T20:20:56.9656774Z ##[group]Run curl -L https://github.com/ninja-build/ninja/releases/latest/download/ninja-win.zip -o ninja.zip
+2026-10-02T20:20:56.9657593Z [36;1mcurl -L https://github.com/ninja-build/ninja/releases/latest/download/ninja-win.zip -o ninja.zip[0m
+2026-10-02T20:20:56.9658157Z [36;1m7z x ninja.zip -o"$GITHUB_WORKSPACE/ninja"[0m
+2026-10-02T20:20:56.9658946Z [36;1mecho "$GITHUB_WORKSPACE/ninja" >> $GITHUB_PATH[0m
+2026-10-02T20:20:56.9674782Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:20:56.9675206Z ##[endgroup]
+2026-10-02T20:20:57.1468995Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+2026-10-02T20:20:57.1469803Z                                  Dload  Upload  Total   Spent   Left   Speed
+2026-10-02T20:20:57.1470238Z 
+2026-10-02T20:20:57.1933264Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.1933958Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.1936337Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.1936706Z 
+2026-10-02T20:20:57.3145650Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.3146335Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.3146825Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.3660529Z 
+2026-10-02T20:20:57.4409087Z   0      0   0      0   0      0      0      0                              0
+2026-10-02T20:20:57.4409836Z 100 284.7k 100 284.7k   0      0 689.1k      0                              0
+2026-10-02T20:20:57.4410539Z 100 284.7k 100 284.7k   0      0 688.9k      0                              0
+2026-10-02T20:20:57.4412159Z 100 284.7k 100 284.7k   0      0 688.7k      0                              0
+2026-10-02T20:20:57.6656644Z 
+2026-10-02T20:20:57.6657720Z 7-Zip 26.03 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-09-03
+2026-10-02T20:20:57.6658261Z 
+2026-10-02T20:20:57.6658388Z Scanning the drive for archives:
+2026-10-02T20:20:57.6658710Z 1 file, 291570 bytes (285 KiB)
+2026-10-02T20:20:57.6658924Z 
+2026-10-02T20:20:57.6659042Z Extracting archive: ninja.zip
+2026-10-02T20:20:57.6838043Z --
+2026-10-02T20:20:57.6838473Z Path = ninja.zip
+2026-10-02T20:20:57.6838816Z Type = zip
+2026-10-02T20:20:57.6839049Z Physical Size = 291570
+2026-10-02T20:20:57.6839220Z 
+2026-10-02T20:20:57.6881417Z Everything is Ok
+2026-10-02T20:20:57.6882043Z 
+2026-10-02T20:20:57.6882358Z Size:       603648
+2026-10-02T20:20:57.6882743Z Compressed: 291570
+2026-10-02T20:20:57.6990374Z ##[end-action id=build.__run_2;outcome=success;conclusion=success;duration_ms=747]
+2026-10-02T20:20:57.6992603Z ##[start-action display=Install dump_syms;id=build.__run_3]
+2026-10-02T20:20:57.7001693Z ##[end-action id=build.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:20:57.7003508Z ##[start-action display=Download bindings repo;id=build.__actions_checkout]
+2026-10-02T20:20:57.7011100Z ##[end-action id=build.__actions_checkout;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:20:57.7012955Z ##[start-action display=Setup bindings enviroment;id=build.__run_4]
+2026-10-02T20:20:57.7017306Z ##[end-action id=build.__run_4;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:20:57.7018954Z ##[start-action display=Setup CLI;id=build.__geode-sdk_cli]
+2026-10-02T20:20:57.7185098Z ##[group]Run geode-sdk/cli/.github/actions/setup@main
+2026-10-02T20:20:57.7185404Z with:
+2026-10-02T20:20:57.7185579Z   version: latest
+2026-10-02T20:20:57.7185772Z ##[endgroup]
+2026-10-02T20:20:57.7190309Z ##[start-action display=Detect platform;id=build.__geode-sdk_cli.platform]
+2026-10-02T20:20:57.7318498Z ##[group]Run if [ "$RUNNER_OS" = "Linux" ]; then
+2026-10-02T20:20:57.7318832Z [36;1mif [ "$RUNNER_OS" = "Linux" ]; then[0m
+2026-10-02T20:20:57.7319140Z [36;1m  echo "host=linux" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:57.7319466Z [36;1melif [ "$RUNNER_OS" = "Windows" ]; then[0m
+2026-10-02T20:20:57.7319759Z [36;1m  echo "host=win" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:57.7320055Z [36;1melif [ "$RUNNER_OS" = "macOS" ]; then[0m
+2026-10-02T20:20:57.7320337Z [36;1m  echo "host=mac" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:20:57.7320585Z [36;1mfi[0m
+2026-10-02T20:20:57.7336470Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:20:57.7336880Z ##[endgroup]
+2026-10-02T20:20:57.7815295Z ##[end-action id=build.__geode-sdk_cli.platform;outcome=success;conclusion=success;duration_ms=62]
+2026-10-02T20:20:57.7818895Z ##[start-action display=Download;id=build.__geode-sdk_cli.__robinraju_release-downloader]
+2026-10-02T20:20:57.8021782Z ##[group]Run robinraju/release-downloader@v1.13
+2026-10-02T20:20:57.8022230Z with:
+2026-10-02T20:20:57.8022510Z   repository: geode-sdk/cli
+2026-10-02T20:20:57.8022861Z   latest: true
+2026-10-02T20:20:57.8023396Z   fileName: *-win.zip
+2026-10-02T20:20:57.8023711Z   tarBall: false
+2026-10-02T20:20:57.8024016Z   zipBall: false
+2026-10-02T20:20:57.8024370Z   out-file-path: my-epic-geode-cli
+2026-10-02T20:20:57.8025756Z   preRelease: false
+2026-10-02T20:20:57.8026168Z   extract: false
+2026-10-02T20:20:57.8028763Z   token: ***
+2026-10-02T20:20:57.8028993Z   github-api-url: https://api.github.com
+2026-10-02T20:20:57.8029273Z ##[endgroup]
+2026-10-02T20:20:57.9612020Z Fetching latest release for repo geode-sdk/cli
+2026-10-02T20:20:57.9790916Z (node:9888) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-02T20:20:57.9793245Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-02T20:20:58.2627163Z Found latest release version: v3.9.0
+2026-10-02T20:20:58.2667891Z Downloading file: geode-cli-v3.9.0-win.zip to: D:\a\click-indicator\click-indicator\my-epic-geode-cli
+2026-10-02T20:20:58.8177917Z Downloaded geode-cli-v3.9.0-win.zip (12124393 bytes)
+2026-10-02T20:20:58.8188967Z Done: D:\a\click-indicator\click-indicator\my-epic-geode-cli\geode-cli-v3.9.0-win.zip
+2026-10-02T20:20:58.8315950Z ##[end-action id=build.__geode-sdk_cli.__robinraju_release-downloader;outcome=success;conclusion=success;duration_ms=1049]
+2026-10-02T20:20:58.8320151Z ##[start-action display=Setup;id=build.__geode-sdk_cli.__run]
+2026-10-02T20:20:58.8483774Z ##[group]Run 7z x "my-epic-geode-cli/*-win.zip" -omy-epic-geode-cli
+2026-10-02T20:20:58.8484739Z [36;1m7z x "my-epic-geode-cli/*-win.zip" -omy-epic-geode-cli[0m
+2026-10-02T20:20:58.8485451Z [36;1mchmod +x my-epic-geode-cli/geode[0m
+2026-10-02T20:20:58.8486133Z [36;1mecho "$GITHUB_WORKSPACE/my-epic-geode-cli" >> $GITHUB_PATH[0m
+2026-10-02T20:20:58.8514282Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:20:58.8515037Z ##[endgroup]
+2026-10-02T20:20:58.9477596Z 
+2026-10-02T20:20:58.9478185Z 7-Zip 26.03 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-09-03
+2026-10-02T20:20:58.9478671Z 
+2026-10-02T20:20:58.9478856Z Scanning the drive for archives:
+2026-10-02T20:20:58.9479263Z 1 file, 12124393 bytes (12 MiB)
+2026-10-02T20:20:58.9479527Z 
+2026-10-02T20:20:58.9479829Z Extracting archive: my-epic-geode-cli\geode-cli-v3.9.0-win.zip
+2026-10-02T20:20:59.1414015Z --
+2026-10-02T20:20:59.1414327Z Path = my-epic-geode-cli\geode-cli-v3.9.0-win.zip
+2026-10-02T20:20:59.1414696Z Type = zip
+2026-10-02T20:20:59.1414928Z Physical Size = 12124393
+2026-10-02T20:20:59.1415100Z 
+2026-10-02T20:20:59.1418393Z Everything is Ok
+2026-10-02T20:20:59.1418561Z 
+2026-10-02T20:20:59.1418650Z Size:       35055753
+2026-10-02T20:20:59.1418898Z Compressed: 12124393
+2026-10-02T20:20:59.1710856Z ##[end-action id=build.__geode-sdk_cli.__run;outcome=success;conclusion=success;duration_ms=338]
+2026-10-02T20:20:59.1723162Z ##[end-action id=build.__geode-sdk_cli;outcome=success;conclusion=success;duration_ms=1470]
+2026-10-02T20:20:59.1725899Z ##[start-action display=Setup Geode SDK;id=build.__run_5]
+2026-10-02T20:20:59.1855041Z ##[group]Run export CLI_PROFILE="D:\a\click-indicator\click-indicator/cli-profile"
+2026-10-02T20:20:59.1855615Z [36;1mexport CLI_PROFILE="D:\a\click-indicator\click-indicator/cli-profile"[0m
+2026-10-02T20:20:59.1855998Z [36;1m# for windows[0m
+2026-10-02T20:20:59.1856252Z [36;1mmkdir -p "$CLI_PROFILE/geode/mods"[0m
+2026-10-02T20:20:59.1856528Z [36;1m# for mac[0m
+2026-10-02T20:20:59.1856773Z [36;1mmkdir -p "$CLI_PROFILE/Contents/geode/mods"[0m
+2026-10-02T20:20:59.1857223Z [36;1mgeode profile add --name GithubActions "$CLI_PROFILE/GeometryDash.exe" win[0m
+2026-10-02T20:20:59.1857914Z [36;1m[0m
+2026-10-02T20:20:59.1858248Z [36;1mgeode sdk install "D:\a\click-indicator\click-indicator/geode-sdk-clone"[0m
+2026-10-02T20:20:59.1858635Z [36;1m[0m
+2026-10-02T20:20:59.1858853Z [36;1m# silly github actions wont refresh the env[0m
+2026-10-02T20:20:59.1859455Z [36;1mexport GEODE_SDK="D:\a\click-indicator\click-indicator/geode-sdk-clone"[0m
+2026-10-02T20:20:59.1859887Z [36;1mecho "GEODE_SDK=$GEODE_SDK" >> $GITHUB_ENV[0m
+2026-10-02T20:20:59.1860881Z [36;1m[0m
+2026-10-02T20:20:59.1861195Z [36;1mif [ "latest" == "nightly" ]; then[0m
+2026-10-02T20:20:59.1861678Z [36;1m  geode sdk update nightly[0m
+2026-10-02T20:20:59.1861980Z [36;1m  geode sdk install-binaries --platform win[0m
+2026-10-02T20:20:59.1862301Z [36;1melif [ "latest" == "latest" ]; then[0m
+2026-10-02T20:20:59.1862574Z [36;1m  geode sdk update stable[0m
+2026-10-02T20:20:59.1862854Z [36;1m  geode sdk install-binaries --platform win[0m
+2026-10-02T20:20:59.1863161Z [36;1melif [ "latest" == "given" ]; then[0m
+2026-10-02T20:20:59.1863676Z [36;1m  export MOD_JSON_PATH=$(find . -name "mod.json" -not -path "./geode-sdk-clone/*" -print | sort -r | head -n 1)[0m
+2026-10-02T20:20:59.1864287Z [36;1m  export TARGET_GEODE_VERSION=$(jq -r '.geode' $MOD_JSON_PATH)[0m
+2026-10-02T20:20:59.1864763Z [36;1m  echo "Updating to version $TARGET_GEODE_VERSION from $MOD_JSON_PATH"[0m
+2026-10-02T20:20:59.1865175Z [36;1m  geode sdk update "$TARGET_GEODE_VERSION"[0m
+2026-10-02T20:20:59.1865608Z [36;1m  geode sdk install-binaries --platform win --version "$TARGET_GEODE_VERSION"[0m
+2026-10-02T20:20:59.1866008Z [36;1melse[0m
+2026-10-02T20:20:59.1866206Z [36;1m  geode sdk update latest[0m
+2026-10-02T20:20:59.1866496Z [36;1m  geode sdk install-binaries --platform win[0m
+2026-10-02T20:20:59.1866776Z [36;1mfi[0m
+2026-10-02T20:20:59.1866946Z [36;1m[0m
+2026-10-02T20:20:59.1867231Z [36;1mexport CPM_CACHE="D:\a\click-indicator\click-indicator/cpm-cache"[0m
+2026-10-02T20:20:59.1867671Z [36;1mecho "CPM_SOURCE_CACHE=$CPM_CACHE" >> $GITHUB_ENV[0m
+2026-10-02T20:20:59.1884815Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:20:59.1885218Z ##[endgroup]
+2026-10-02T20:20:59.3309658Z | Done | A new profile named 'GithubActions' has been created
+2026-10-02T20:20:59.3632187Z | Info | Downloading SDK
+2026-10-02T20:20:59.9203439Z | Info | Enumerating objects: 60316, done.
+2026-10-02T20:20:59.9203890Z | Info | Counting objects:   0% (1/1433)
+2026-10-02T20:20:59.9204412Z | Info | Counting objects:   1% (15/1433)
+2026-10-02T20:20:59.9204890Z | Info | Counting objects:   2% (29/1433)
+2026-10-02T20:20:59.9205348Z | Info | Counting objects:   3% (43/1433)
+2026-10-02T20:20:59.9205749Z | Info | Counting objects:   4% (58/1433)
+2026-10-02T20:20:59.9206202Z | Info | Counting objects:   5% (72/1433)
+2026-10-02T20:20:59.9206642Z | Info | Counting objects:   6% (86/1433)
+2026-10-02T20:20:59.9207070Z Counting objects:   7% (101/1433)
+2026-10-02T20:20:59.9207487Z | Info | Counting objects:   8% (115/1433)
+2026-10-02T20:20:59.9207916Z | Info | Counting objects:   9% (129/1433)
+2026-10-02T20:20:59.9208361Z | Info | Counting objects:  10% (144/1433)
+2026-10-02T20:20:59.9208679Z Counting objects:  11% (158/1433)
+2026-10-02T20:20:59.9208989Z | Info | Counting objects:  12% (172/1433)
+2026-10-02T20:20:59.9209316Z | Info | Counting objects:  13% (187/1433)
+2026-10-02T20:20:59.9209621Z Counting objects:  14% (201/1433)
+2026-10-02T20:20:59.9209918Z | Info | Counting objects:  15% (215/1433)
+2026-10-02T20:20:59.9210236Z | Info | Counting objects:  16% (230/1433)
+2026-10-02T20:20:59.9210924Z | Info | Counting objects:  17% (244/1433)
+2026-10-02T20:20:59.9211244Z | Info | Counting objects:  18% (258/1433)
+2026-10-02T20:20:59.9211558Z | Info | Counting objects:  19% (273/1433)
+2026-10-02T20:20:59.9211876Z | Info | Counting objects:  20% (287/1433)
+2026-10-02T20:20:59.9212192Z | Info | Counting objects:  21% (301/1433)
+2026-10-02T20:20:59.9212504Z | Info | Counting objects:  22% (316/1433)
+2026-10-02T20:20:59.9212821Z | Info | Counting objects:  23% (330/1433)
+2026-10-02T20:20:59.9213176Z | Info | Counting objects:  24% (344/1433)
+2026-10-02T20:20:59.9213486Z | Info | Counting objects:  25% (359/1433)
+2026-10-02T20:20:59.9214119Z | Info | Counting objects:  26% (373/1433)
+2026-10-02T20:20:59.9214434Z | Info | Counting objects:  27% (387/1433)
+2026-10-02T20:20:59.9214747Z | Info | Counting objects:  28% (402/1433)
+2026-10-02T20:20:59.9215192Z | Info | Counting objects:  29% (416/1433)
+2026-10-02T20:20:59.9215512Z | Info | Counting objects:  30% (430/1433)
+2026-10-02T20:20:59.9215824Z | Info | Counting objects:  31% (445/1433)
+2026-10-02T20:20:59.9216095Z | Info | Counting objects:  32% (459/1433)
+2026-10-02T20:20:59.9216344Z | Info | Counting objects:  33% (473/1433)
+2026-10-02T20:20:59.9216593Z | Info | Counting objects:  34% (488/1433)
+2026-10-02T20:20:59.9216850Z | Info | Counting objects:  35% (502/1433)
+2026-10-02T20:20:59.9217098Z | Info | Counting objects:  36% (516/1433)
+2026-10-02T20:20:59.9217351Z | Info | Counting objects:  37% (531/1433)
+2026-10-02T20:20:59.9217635Z | Info | Counting objects:  38% (545/1433)
+2026-10-02T20:20:59.9217905Z | Info | Counting objects:  39% (559/1433)
+2026-10-02T20:20:59.9218176Z | Info | Counting objects:  40% (574/1433)
+2026-10-02T20:20:59.9218437Z | Info | Counting objects:  41% (588/1433)
+2026-10-02T20:20:59.9218692Z | Info | Counting objects:  42% (602/1433)
+2026-10-02T20:20:59.9218956Z | Info | Counting objects:  43% (617/1433)
+2026-10-02T20:20:59.9219212Z | Info | Counting objects:  44% (631/1433)
+2026-10-02T20:20:59.9219488Z | Info | Counting objects:  45% (645/1433)
+2026-10-02T20:20:59.9219747Z | Info | Counting objects:  46% (660/1433)
+2026-10-02T20:20:59.9219999Z | Info | Counting objects:  47% (674/1433)
+2026-10-02T20:20:59.9220258Z | Info | Counting objects:  48% (688/1433)
+2026-10-02T20:20:59.9220516Z | Info | Counting objects:  49% (703/1433)
+2026-10-02T20:20:59.9220765Z | Info | Counting objects:  50% (717/1433)
+2026-10-02T20:20:59.9221025Z | Info | Counting objects:  51% (731/1433)
+2026-10-02T20:20:59.9221281Z | Info | Counting objects:  52% (746/1433)
+2026-10-02T20:20:59.9221540Z | Info | Counting objects:  53% (760/1433)
+2026-10-02T20:20:59.9221796Z | Info | Counting objects:  54% (774/1433)
+2026-10-02T20:20:59.9222049Z | Info | Counting objects:  55% (789/1433)
+2026-10-02T20:20:59.9222304Z | Info | Counting objects:  56% (803/1433)
+2026-10-02T20:20:59.9222556Z | Info | Counting objects:  57% (817/1433)
+2026-10-02T20:20:59.9222817Z | Info | Counting objects:  58% (832/1433)
+2026-10-02T20:20:59.9223068Z | Info | Counting objects:  59% (846/1433)
+2026-10-02T20:20:59.9223319Z | Info | Counting objects:  60% (860/1433)
+2026-10-02T20:20:59.9223579Z | Info | Counting objects:  61% (875/1433)
+2026-10-02T20:20:59.9223831Z | Info | Counting objects:  62% (889/1433)
+2026-10-02T20:20:59.9224082Z | Info | Counting objects:  63% (903/1433)
+2026-10-02T20:20:59.9224401Z | Info | Counting objects:  64% (918/1433)
+2026-10-02T20:20:59.9224668Z | Info | Counting objects:  65% (932/1433)
+2026-10-02T20:20:59.9224929Z | Info | Counting objects:  66% (946/1433)
+2026-10-02T20:20:59.9225185Z | Info | Counting objects:  67% (961/1433)
+2026-10-02T20:20:59.9225448Z | Info | Counting objects:  68% (975/1433)
+2026-10-02T20:20:59.9225709Z | Info | Counting objects:  69% (989/1433)
+2026-10-02T20:20:59.9225961Z Counting objects:  70% (1004/1433)
+2026-10-02T20:20:59.9226218Z | Info | Counting objects:  71% (1018/1433)
+2026-10-02T20:20:59.9226486Z | Info | Counting objects:  72% (1032/1433)
+2026-10-02T20:20:59.9226752Z | Info | Counting objects:  73% (1047/1433)
+2026-10-02T20:20:59.9227008Z | Info | Counting objects:  74% (1061/1433)
+2026-10-02T20:20:59.9227262Z | Info | Counting objects:  75% (1075/1433)
+2026-10-02T20:20:59.9227524Z | Info | Counting objects:  76% (1090/1433)
+2026-10-02T20:20:59.9227778Z | Info | Counting objects:  77% (1104/1433)
+2026-10-02T20:20:59.9228033Z | Info | Counting objects:  78% (1118/1433)
+2026-10-02T20:20:59.9228297Z | Info | Counting objects:  79% (1133/1433)
+2026-10-02T20:20:59.9228552Z | Info | Counting objects:  80% (1147/1433)
+2026-10-02T20:20:59.9228815Z | Info | Counting objects:  81% (1161/1433)
+2026-10-02T20:20:59.9229916Z | Info | Counting objects:  82% (1176/1433)
+2026-10-02T20:20:59.9230194Z | Info | Counting objects:  83% (1190/1433)
+2026-10-02T20:20:59.9230480Z | Info | Counting objects:  84% (1204/1433)
+2026-10-02T20:20:59.9231344Z | Info | Counting objects:  85% (1219/1433)
+2026-10-02T20:20:59.9231621Z | Info | Counting objects:  86% (1233/1433)
+2026-10-02T20:20:59.9231883Z | Info | Counting objects:  87% (1247/1433)
+2026-10-02T20:20:59.9232137Z | Info | Counting objects:  88% (1262/1433)
+2026-10-02T20:20:59.9232395Z | Info | Counting objects:  89% (1276/1433)
+2026-10-02T20:20:59.9232649Z | Info | Counting objects:  90% (1290/1433)
+2026-10-02T20:20:59.9232901Z | Info | Counting objects:  91% (1305/1433)
+2026-10-02T20:20:59.9233181Z | Info | Counting objects:  92% (1319/1433)
+2026-10-02T20:20:59.9233439Z | Info | Counting objects:  93% (1333/1433)
+2026-10-02T20:20:59.9233698Z | Info | Counting objects:  94% (1348/1433)
+2026-10-02T20:20:59.9233971Z | Info | Counting objects:  95% (1362/1433)
+2026-10-02T20:20:59.9234240Z | Info | Counting objects:  96% (1376/1433)
+2026-10-02T20:20:59.9234496Z | Info | Counting objects:  97% (1391/1433)
+2026-10-02T20:20:59.9234759Z | Info | Counting objects:  98% (1405/1433)
+2026-10-02T20:20:59.9235021Z | Info | Counting objects:  99% (1419/1433)
+2026-10-02T20:20:59.9235285Z | Info | Counting objects: 100% (1433/1433)
+2026-10-02T20:20:59.9235573Z | Info | Counting objects: 100% (1433/1433), done.
+2026-10-02T20:20:59.9235866Z | Info | Compressing objects:   0% (1/492)
+2026-10-02T20:20:59.9236136Z | Info | Compressing objects:   1% (5/492)
+2026-10-02T20:20:59.9236398Z | Info | Compressing objects:   2% (10/492)
+2026-10-02T20:20:59.9236664Z | Info | Compressing objects:   3% (15/492)
+2026-10-02T20:20:59.9236928Z | Info | Compressing objects:   4% (20/492)
+2026-10-02T20:20:59.9237188Z | Info | Compressing objects:   5% (25/492)
+2026-10-02T20:20:59.9237453Z | Info | Compressing objects:   6% (30/492)
+2026-10-02T20:20:59.9237715Z | Info | Compressing objects:   7% (35/492)
+2026-10-02T20:20:59.9237976Z | Info | Compressing objects:   8% (40/492)
+2026-10-02T20:20:59.9238239Z | Info | Compressing objects:   9% (45/492)
+2026-10-02T20:20:59.9238501Z | Info | Compressing objects:  10% (50/492)
+2026-10-02T20:20:59.9238766Z | Info | Compressing objects:  11% (55/492)
+2026-10-02T20:20:59.9239024Z | Info | Compressing objects:  12% (60/492)
+2026-10-02T20:20:59.9239280Z | Info | Compressing objects:  13% (64/492)
+2026-10-02T20:20:59.9239543Z | Info | Compressing objects:  14% (69/492)
+2026-10-02T20:20:59.9239800Z | Info | Compressing objects:  15% (74/492)
+2026-10-02T20:20:59.9240063Z | Info | Compressing objects:  16% (79/492)
+2026-10-02T20:20:59.9240333Z | Info | Compressing objects:  17% (84/492)
+2026-10-02T20:20:59.9240593Z | Info | Compressing objects:  18% (89/492)
+2026-10-02T20:20:59.9240861Z | Info | Compressing objects:  19% (94/492)
+2026-10-02T20:20:59.9241120Z | Info | Compressing objects:  20% (99/492)
+2026-10-02T20:20:59.9241387Z | Info | Compressing objects:  21% (104/492)
+2026-10-02T20:20:59.9241673Z | Info | Compressing objects:  22% (109/492)
+2026-10-02T20:20:59.9241944Z | Info | Compressing objects:  23% (114/492)
+2026-10-02T20:20:59.9242218Z | Info | Compressing objects:  24% (119/492)
+2026-10-02T20:20:59.9242483Z | Info | Compressing objects:  25% (123/492)
+2026-10-02T20:20:59.9242748Z | Info | Compressing objects:  26% (128/492)
+2026-10-02T20:20:59.9243019Z | Info | Compressing objects:  27% (133/492)
+2026-10-02T20:20:59.9243286Z | Info | Compressing objects:  28% (138/492)
+2026-10-02T20:20:59.9243552Z | Info | Compressing objects:  29% (143/492)
+2026-10-02T20:20:59.9243824Z | Info | Compressing objects:  30% (148/492)
+2026-10-02T20:20:59.9244090Z | Info | Compressing objects:  31% (153/492)
+2026-10-02T20:20:59.9244366Z | Info | Compressing objects:  32% (158/492)
+2026-10-02T20:20:59.9244635Z | Info | Compressing objects:  33% (163/492)
+2026-10-02T20:20:59.9244903Z | Info | Compressing objects:  34% (168/492)
+2026-10-02T20:20:59.9245276Z | Info | Compressing objects:  35% (173/492)
+2026-10-02T20:20:59.9245550Z | Info | Compressing objects:  36% (178/492)
+2026-10-02T20:20:59.9245817Z | Info | Compressing objects:  37% (183/492)
+2026-10-02T20:20:59.9246169Z | Info | Compressing objects:  38% (187/492)
+2026-10-02T20:20:59.9246438Z | Info | Compressing objects:  39% (192/492)
+2026-10-02T20:20:59.9246707Z | Info | Compressing objects:  40% (197/492)
+2026-10-02T20:20:59.9246969Z | Info | Compressing objects:  41% (202/492)
+2026-10-02T20:20:59.9247230Z | Info | Compressing objects:  42% (207/492)
+2026-10-02T20:20:59.9247536Z Compressing objects:  43% (212/492)
+2026-10-02T20:20:59.9247792Z | Info | Compressing objects:  44% (217/492)
+2026-10-02T20:20:59.9248062Z | Info | Compressing objects:  45% (222/492)
+2026-10-02T20:20:59.9248835Z | Info | Compressing objects:  46% (227/492)
+2026-10-02T20:20:59.9249156Z | Info | Compressing objects:  47% (232/492)
+2026-10-02T20:20:59.9249434Z | Info | Compressing objects:  48% (237/492)
+2026-10-02T20:20:59.9249713Z | Info | Compressing objects:  49% (242/492)
+2026-10-02T20:20:59.9249982Z | Info | Compressing objects:  50% (246/492)
+2026-10-02T20:20:59.9250254Z | Info | Compressing objects:  51% (251/492)
+2026-10-02T20:20:59.9250522Z | Info | Compressing objects:  52% (256/492)
+2026-10-02T20:20:59.9250791Z | Info | Compressing objects:  53% (261/492)
+2026-10-02T20:20:59.9251056Z | Info | Compressing objects:  54% (266/492)
+2026-10-02T20:20:59.9251323Z | Info | Compressing objects:  55% (271/492)
+2026-10-02T20:20:59.9251592Z | Info | Compressing objects:  56% (276/492)
+2026-10-02T20:20:59.9251856Z | Info | Compressing objects:  57% (281/492)
+2026-10-02T20:20:59.9252125Z | Info | Compressing objects:  58% (286/492)
+2026-10-02T20:20:59.9252397Z | Info | Compressing objects:  59% (291/492)
+2026-10-02T20:20:59.9252661Z | Info | Compressing objects:  60% (296/492)
+2026-10-02T20:20:59.9252935Z | Info | Compressing objects:  61% (301/492)
+2026-10-02T20:20:59.9253204Z | Info | Compressing objects:  62% (306/492)
+2026-10-02T20:20:59.9253472Z | Info | Compressing objects:  63% (310/492)
+2026-10-02T20:20:59.9253740Z | Info | Compressing objects:  64% (315/492)
+2026-10-02T20:20:59.9254008Z | Info | Compressing objects:  65% (320/492)
+2026-10-02T20:20:59.9254281Z | Info | Compressing objects:  66% (325/492)
+2026-10-02T20:20:59.9254550Z | Info | Compressing objects:  67% (330/492)
+2026-10-02T20:20:59.9254816Z | Info | Compressing objects:  68% (335/492)
+2026-10-02T20:20:59.9255091Z | Info | Compressing objects:  69% (340/492)
+2026-10-02T20:20:59.9255366Z | Info | Compressing objects:  70% (345/492)
+2026-10-02T20:20:59.9255632Z | Info | Compressing objects:  71% (350/492)
+2026-10-02T20:20:59.9255903Z | Info | Compressing objects:  72% (355/492)
+2026-10-02T20:20:59.9256170Z | Info | Compressing objects:  73% (360/492)
+2026-10-02T20:20:59.9256443Z | Info | Compressing objects:  74% (365/492)
+2026-10-02T20:20:59.9256715Z | Info | Compressing objects:  75% (369/492)
+2026-10-02T20:20:59.9256984Z | Info | Compressing objects:  76% (374/492)
+2026-10-02T20:20:59.9257250Z | Info | Compressing objects:  77% (379/492)
+2026-10-02T20:20:59.9257513Z | Info | Compressing objects:  78% (384/492)
+2026-10-02T20:20:59.9257779Z | Info | Compressing objects:  79% (389/492)
+2026-10-02T20:20:59.9258044Z | Info | Compressing objects:  80% (394/492)
+2026-10-02T20:20:59.9258307Z | Info | Compressing objects:  81% (399/492)
+2026-10-02T20:20:59.9258574Z | Info | Compressing objects:  82% (404/492)
+2026-10-02T20:20:59.9258838Z | Info | Compressing objects:  83% (409/492)
+2026-10-02T20:20:59.9259102Z | Info | Compressing objects:  84% (414/492)
+2026-10-02T20:20:59.9259371Z | Info | Compressing objects:  85% (419/492)
+2026-10-02T20:20:59.9259637Z | Info | Compressing objects:  86% (424/492)
+2026-10-02T20:20:59.9259908Z | Info | Compressing objects:  87% (429/492)
+2026-10-02T20:20:59.9260174Z | Info | Compressing objects:  88% (433/492)
+2026-10-02T20:20:59.9260438Z | Info | Compressing objects:  89% (438/492)
+2026-10-02T20:20:59.9260871Z | Info | Compressing objects:  90% (443/492)
+2026-10-02T20:20:59.9261145Z | Info | Compressing objects:  91% (448/492)
+2026-10-02T20:20:59.9261406Z | Info | Compressing objects:  92% (453/492)
+2026-10-02T20:20:59.9262162Z | Info | Compressing objects:  93% (458/492)
+2026-10-02T20:20:59.9262482Z | Info | Compressing objects:  94% (463/492)
+2026-10-02T20:20:59.9262757Z | Info | Compressing objects:  95% (468/492)
+2026-10-02T20:20:59.9263026Z | Info | Compressing objects:  96% (473/492)
+2026-10-02T20:20:59.9263300Z | Info | Compressing objects:  97% (478/492)
+2026-10-02T20:20:59.9263567Z | Info | Compressing objects:  98% (483/492)
+2026-10-02T20:20:59.9263838Z | Info | Compressing objects:  99% (488/492)
+2026-10-02T20:20:59.9264106Z | Info | Compressing objects: 100% (492/492)
+2026-10-02T20:20:59.9264390Z | Info | Compressing objects: 100% (492/492), done.
+2026-10-02T20:21:10.8956534Z | Info | Total 60316 (delta 1261), reused 946 (delta 941), pack-reused 58883 (from 4)
+2026-10-02T20:21:15.1371792Z | Info | Set GEODE_SDK environment variable automatically
+2026-10-02T20:21:15.2210972Z | Info | Updating head
+2026-10-02T20:21:15.2866828Z | Done | Updated head to v5.10.1
+2026-10-02T20:21:15.2867614Z | Done | Successfully installed SDK
+2026-10-02T20:21:15.2868408Z | Info | Please restart your command line to have the GEODE_SDK enviroment variable set.
+2026-10-02T20:21:15.2869187Z | Info | Use `geode sdk install-binaries` to install pre-built binaries
+2026-10-02T20:21:15.3232514Z | Info | Switching to stable
+2026-10-02T20:21:15.3232987Z | Info | Updating SDK
+2026-10-02T20:21:15.6225136Z | Info | Updating head
+2026-10-02T20:21:15.7030212Z | Done | Updated head to v5.10.1
+2026-10-02T20:21:15.7030812Z | Done | Successfully updated SDK.
+2026-10-02T20:21:15.7357772Z | Info | Installing binaries for 5.10.1
+2026-10-02T20:21:16.0689510Z | Info | Found binaries for platform Windows
+2026-10-02T20:21:16.0693031Z | Info | Downloading
+2026-10-02T20:21:16.9455785Z | Done | Binaries installed
+2026-10-02T20:21:16.9588241Z ##[end-action id=build.__run_5;outcome=success;conclusion=success;duration_ms=17786]
+2026-10-02T20:21:16.9590631Z ##[start-action display=Run CMake and build;id=build.build]
+2026-10-02T20:21:16.9747288Z ##[group]Run mkdir -p $HOME/.cache
+2026-10-02T20:21:16.9747623Z [36;1mmkdir -p $HOME/.cache[0m
+2026-10-02T20:21:16.9747857Z [36;1m[0m
+2026-10-02T20:21:16.9748079Z [36;1mNDK_PATH="/usr/local/lib/android/sdk/ndk/"[0m
+2026-10-02T20:21:16.9748378Z [36;1mif [ "" = "" ]; then[0m
+2026-10-02T20:21:16.9748637Z [36;1m  NDK_PATH="$ANDROID_NDK_LATEST_HOME"[0m
+2026-10-02T20:21:16.9748899Z [36;1mfi[0m
+2026-10-02T20:21:16.9749068Z [36;1m[0m
+2026-10-02T20:21:16.9749246Z [36;1mcd "./"[0m
+2026-10-02T20:21:16.9749443Z [36;1mCMAKE_EXTRA_ARGS=""[0m
+2026-10-02T20:21:16.9749679Z [36;1mif [ win = "mac" ]; then[0m
+2026-10-02T20:21:16.9750333Z [36;1m  CMAKE_EXTRA_ARGS="-DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 -DGEODE_DISABLE_PRECOMPILED_HEADERS=OFF -DCMAKE_AR='/usr/bin/ar' -DCMAKE_RANLIB='/usr/bin/ranlib'"[0m
+2026-10-02T20:21:16.9751030Z [36;1melif [ win = "android32" ]; then[0m
+2026-10-02T20:21:16.9751777Z [36;1m  CMAKE_EXTRA_ARGS="-DCMAKE_TOOLCHAIN_FILE=$NDK_PATH/build/cmake/android.toolchain.cmake -DANDROID_STL=c++_shared -DANDROID_ABI=armeabi-v7a -DANDROID_PLATFORM=android-23"[0m
+2026-10-02T20:21:16.9752515Z [36;1melif [ win = "android64" ]; then[0m
+2026-10-02T20:21:16.9753229Z [36;1m  CMAKE_EXTRA_ARGS="-DCMAKE_TOOLCHAIN_FILE=$NDK_PATH/build/cmake/android.toolchain.cmake -DANDROID_STL=c++_shared -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-23"[0m
+2026-10-02T20:21:16.9753961Z [36;1melif [ win = "ios" ]; then[0m
+2026-10-02T20:21:16.9754490Z [36;1m  CMAKE_EXTRA_ARGS="-DCMAKE_SYSTEM_NAME=iOS -DGEODE_TARGET_PLATFORM=iOS -DGEODE_DISABLE_PRECOMPILED_HEADERS=OFF"[0m
+2026-10-02T20:21:16.9755007Z [36;1mfi[0m
+2026-10-02T20:21:16.9755195Z [36;1mif [ "true" = "true" ]; then[0m
+2026-10-02T20:21:16.9755585Z [36;1m  CMAKE_EXTRA_ARGS="$CMAKE_EXTRA_ARGS -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON"[0m
+2026-10-02T20:21:16.9756159Z [36;1mfi[0m
+2026-10-02T20:21:16.9756392Z [36;1mif [ "false" = "true" ] && [ win = "win" ]; then[0m
+2026-10-02T20:21:16.9756894Z [36;1m  CMAKE_EXTRA_ARGS="$CMAKE_EXTRA_ARGS -DGEODE_BUNDLE_PDB=ON"[0m
+2026-10-02T20:21:16.9757243Z [36;1mfi[0m
+2026-10-02T20:21:16.9757421Z [36;1mif [ -n "sccache" ]; then[0m
+2026-10-02T20:21:16.9757678Z [36;1m  CCACHE_PATH="$(which "sccache")"[0m
+2026-10-02T20:21:16.9758257Z [36;1m  CMAKE_EXTRA_ARGS="$CMAKE_EXTRA_ARGS -DCMAKE_C_COMPILER_LAUNCHER=${CCACHE_PATH} -DCMAKE_CXX_COMPILER_LAUNCHER=${CCACHE_PATH}"[0m
+2026-10-02T20:21:16.9758802Z [36;1mfi[0m
+2026-10-02T20:21:16.9759781Z [36;1mcmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DGEODE_CODEGEN_CMAKE_ARGS="-DCMAKE_C_COMPILER=clang;-DCMAKE_CXX_COMPILER=clang++;-G Ninja" -G Ninja $CMAKE_EXTRA_ARGS -DGEODE_DONT_INSTALL_MODS=ON -DGEODE_TARGET_PLATFORM=Win64 [0m
+2026-10-02T20:21:16.9760903Z [36;1mcmake --build build --config Release  --parallel[0m
+2026-10-02T20:21:16.9761224Z [36;1m[0m
+2026-10-02T20:21:16.9761479Z [36;1mmkdir "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9761789Z [36;1m[0m
+2026-10-02T20:21:16.9762015Z [36;1mfor file in $(find ./build -name *.geode); do[0m
+2026-10-02T20:21:16.9762383Z [36;1m  cp $file "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9762762Z [36;1m  if [ win = "linux" ] && [ "false" = "true" ]; then[0m
+2026-10-02T20:21:16.9763119Z [36;1m    if [ win = "android32" ] || [ win = "android64" ]; then[0m
+2026-10-02T20:21:16.9763486Z [36;1m      SO_FILE_NAME="$(basename $file .geode).win.so"[0m
+2026-10-02T20:21:16.9763832Z [36;1m      if [ -f "./build/$SO_FILE_NAME" ]; then[0m
+2026-10-02T20:21:16.9764591Z [36;1m        dump_syms ./build/$SO_FILE_NAME -o "D:\a\click-indicator\click-indicator/output/$SO_FILE_NAME.sym"[0m
+2026-10-02T20:21:16.9765075Z [36;1m      fi[0m
+2026-10-02T20:21:16.9765267Z [36;1m    fi[0m
+2026-10-02T20:21:16.9765444Z [36;1m  fi[0m
+2026-10-02T20:21:16.9765627Z [36;1mdone[0m
+2026-10-02T20:21:16.9765796Z [36;1m[0m
+2026-10-02T20:21:16.9766113Z [36;1mif [ win = "win" ]; then[0m
+2026-10-02T20:21:16.9766439Z [36;1m  if [ "false" = "true" ]; then[0m
+2026-10-02T20:21:16.9766749Z [36;1m    for file in $(find ./build -name *.pdb); do[0m
+2026-10-02T20:21:16.9767122Z [36;1m      cp $file "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9767442Z [36;1m    done[0m
+2026-10-02T20:21:16.9767621Z [36;1m  fi[0m
+2026-10-02T20:21:16.9767790Z [36;1mfi[0m
+2026-10-02T20:21:16.9767956Z [36;1m[0m
+2026-10-02T20:21:16.9768133Z [36;1mif [ "false" = "true" ]; then[0m
+2026-10-02T20:21:16.9768423Z [36;1m  for file in $(find ./build -name *.pdb); do[0m
+2026-10-02T20:21:16.9768781Z [36;1m    cp $file "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9769092Z [36;1m  done[0m
+2026-10-02T20:21:16.9769312Z [36;1m  for file in $(find ./build -name *.dbg); do[0m
+2026-10-02T20:21:16.9769668Z [36;1m    cp $file "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9769972Z [36;1m  done[0m
+2026-10-02T20:21:16.9770201Z [36;1m  for dir in $(find ./build -name *.dSYM); do[0m
+2026-10-02T20:21:16.9770552Z [36;1m    cp -R $dir "D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9770871Z [36;1m  done[0m
+2026-10-02T20:21:16.9771062Z [36;1mfi[0m
+2026-10-02T20:21:16.9771230Z [36;1m[0m
+2026-10-02T20:21:16.9771497Z [36;1mOUTPUT_DIR="D:\a\click-indicator\click-indicator/output"[0m
+2026-10-02T20:21:16.9771838Z [36;1mif [ win = "mac" ]; then[0m
+2026-10-02T20:21:16.9772284Z [36;1m  OUTPUT_DIR=$(python3 -c 'import os, sys; print(os.path.realpath(sys.argv[1]))' "$OUTPUT_DIR")[0m
+2026-10-02T20:21:16.9772767Z [36;1melif [ win = "win" ]; then[0m
+2026-10-02T20:21:16.9773054Z [36;1m  OUTPUT_DIR=$(cygpath -wa "$OUTPUT_DIR")[0m
+2026-10-02T20:21:16.9773335Z [36;1melse[0m
+2026-10-02T20:21:16.9773682Z [36;1m  OUTPUT_DIR=$(realpath "$OUTPUT_DIR")[0m
+2026-10-02T20:21:16.9773946Z [36;1mfi[0m
+2026-10-02T20:21:16.9774171Z [36;1mecho "output=$OUTPUT_DIR" >> $GITHUB_OUTPUT[0m
+2026-10-02T20:21:16.9791703Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-10-02T20:21:16.9792125Z env:
+2026-10-02T20:21:16.9792399Z   GEODE_SDK: D:\a\click-indicator\click-indicator/geode-sdk-clone
+2026-10-02T20:21:16.9792834Z   CPM_SOURCE_CACHE: D:\a\click-indicator\click-indicator/cpm-cache
+2026-10-02T20:21:16.9793175Z ##[endgroup]
+2026-10-02T20:21:24.2357417Z -- The C compiler identification is Clang 20.1.8 with GNU-like command-line
+2026-10-02T20:21:28.6430008Z -- The CXX compiler identification is Clang 20.1.8 with GNU-like command-line
+2026-10-02T20:21:28.8180009Z -- Detecting C compiler ABI info
+2026-10-02T20:21:31.1762410Z -- Detecting C compiler ABI info - done
+2026-10-02T20:21:31.2271964Z -- Check for working C compiler: C:/Program Files/LLVM/bin/clang.exe - skipped
+2026-10-02T20:21:31.2288220Z -- Detecting C compile features
+2026-10-02T20:21:31.2301811Z -- Detecting C compile features - done
+2026-10-02T20:21:31.2866226Z -- Detecting CXX compiler ABI info
+2026-10-02T20:21:31.9664094Z -- Detecting CXX compiler ABI info - done
+2026-10-02T20:21:32.0064304Z -- Check for working CXX compiler: C:/Program Files/LLVM/bin/clang++.exe - skipped
+2026-10-02T20:21:32.0070563Z -- Detecting CXX compile features
+2026-10-02T20:21:32.5677679Z -- Detecting CXX compile features - done
+2026-10-02T20:21:32.5743197Z -- Version: 5.10.1
+2026-10-02T20:21:32.6152640Z -- No override path for bindings provided, using CPM to clone default. If you would like to use a separate clone of the bindings repo (for example in order to be able to efficiently change and contribute new bindings) then set GEODE_BINDINGS_REPO_PATH to where you have cloned the repository (system environment variables are supported).
+2026-10-02T20:21:32.6155671Z -- CPM: Adding package bindings@ (main)
+2026-10-02T20:21:32.6165369Z -- Populating bindings
+2026-10-02T20:21:32.7384335Z -- Configuring done (0.1s)
+2026-10-02T20:21:32.7573692Z -- Generating done (0.0s)
+2026-10-02T20:21:32.7582172Z -- Build files have been written to: D:/a/click-indicator/click-indicator/build/_deps/bindings-subbuild
+2026-10-02T20:21:32.8467958Z [1/9] Creating directories for 'bindings-populate'
+2026-10-02T20:21:32.8470220Z [1/9] Performing download step (git clone) for 'bindings-populate'
+2026-10-02T20:21:32.9055545Z Cloning into 'bindings-src'...
+2026-10-02T20:21:40.3212631Z Already on 'main'
+2026-10-02T20:21:40.3239029Z Your branch is up to date with 'origin/main'.
+2026-10-02T20:21:40.9564301Z [2/9] Performing update step for 'bindings-populate'
+2026-10-02T20:21:41.0132933Z -- Fetching latest from the remote origin
+2026-10-02T20:21:42.4578320Z [3/9] No patch step for 'bindings-populate'
+2026-10-02T20:21:42.5475468Z [5/9] No configure step for 'bindings-populate'
+2026-10-02T20:21:42.5914766Z [6/9] No build step for 'bindings-populate'
+2026-10-02T20:21:42.6357278Z [7/9] No install step for 'bindings-populate'
+2026-10-02T20:21:42.6798896Z [8/9] No test step for 'bindings-populate'
+2026-10-02T20:21:42.7421185Z [9/9] Completed 'bindings-populate'
+2026-10-02T20:21:42.7478868Z -- Looking for ccache/sccache
+2026-10-02T20:21:42.7479717Z -- Looking for ccache/sccache - detecting variant
+2026-10-02T20:21:42.7480210Z Using sccache with Clang, PCH will be enabled.
+2026-10-02T20:21:42.7480554Z -- Looking for ccache/sccache - detected sccache
+2026-10-02T20:21:42.7481484Z -- Pre-compiled headers - ON
+2026-10-02T20:21:42.7639333Z -- Found Geode CLI: D:/a/click-indicator/click-indicator/my-epic-geode-cli/geode.exe (version 3.9.0)
+2026-10-02T20:21:42.7671696Z -- Found Git: C:/Program Files/Git/mingw64/bin/git.exe (found version "2.55.0.windows.5")
+2026-10-02T20:21:42.8096082Z -- CPM: Adding package result@1.4.1 (v1.4.1 at D:/a/click-indicator/click-indicator/cpm-cache/result/1b9c)
+2026-10-02T20:21:42.8592718Z -- CPM: Adding package json@3.3.1 (v3.3.1 at D:/a/click-indicator/click-indicator/cpm-cache/json/f349)
+2026-10-02T20:21:43.0524432Z -- CPM: Adding package nontype_functional@6 (6d1d08c at D:/a/click-indicator/click-indicator/cpm-cache/nontype_functional/aaa0)
+2026-10-02T20:21:43.1494948Z -- {fmt} version: 12.1.0
+2026-10-02T20:21:43.1495514Z -- Build type: Release
+2026-10-02T20:21:43.1579385Z -- Performing Test HAS_NULLPTR_WARNING
+2026-10-02T20:21:45.3500135Z -- Performing Test HAS_NULLPTR_WARNING - Success
+2026-10-02T20:21:45.3514794Z -- CPM: Adding package fmt@5 (5ac44cd at D:/a/click-indicator/click-indicator/cpm-cache/fmt/71b2)
+2026-10-02T20:21:45.4094960Z -- CPM: Adding package asp2@76 (76d4d86 at D:/a/click-indicator/click-indicator/cpm-cache/asp2/3ace)
+2026-10-02T20:21:45.4636465Z -- Arc features: time
+2026-10-02T20:21:45.4648596Z -- CPM: Adding package arc@1.5.9 (v1.5.9 at D:/a/click-indicator/click-indicator/cpm-cache/arc/05d9)
+2026-10-02T20:21:45.5257282Z -- CPM: Adding package TulipHook@3.1.14 (v3.1.14 at D:/a/click-indicator/click-indicator/cpm-cache/tuliphook/5f5c)
+2026-10-02T20:21:45.5271846Z -- Performing Test SUPPORTS_W_NO_EVERYTHING
+2026-10-02T20:21:45.8244203Z -- Performing Test SUPPORTS_W_NO_EVERYTHING - Success
+2026-10-02T20:21:45.8264424Z -- Downloading Codegen
+2026-10-02T20:21:45.8265136Z Set SKIP_BUILDING_CODEGEN to OFF to force codegen to build locally.
+2026-10-02T20:21:46.2710517Z -- Downloading Codegen - success
+2026-10-02T20:21:46.2711005Z -- Skipping building Codegen
+2026-10-02T20:21:46.2711449Z -- Running Codegen
+2026-10-02T20:21:47.5200459Z 'D:/a/click-indicator/click-indicator/build/bindings/codegen/Codegen.exe' 'Win64' 'D:/a/click-indicator/click-indicator/build/_deps/bindings-src/bindings/2.2081' 'D:/a/click-indicator/click-indicator/build/bindings/bindings'
+2026-10-02T20:21:47.5201575Z -- Setting up ClickIndicator
+2026-10-02T20:21:47.5302752Z -- Mod author.click-indicator is compiling for Geode version 5.10.1
+2026-10-02T20:21:47.5303548Z -- Mod author.click-indicator is compiling for Geometry Dash version 2.2081
+2026-10-02T20:21:47.5498457Z -- Skipping installing ClickIndicator
+2026-10-02T20:21:47.5508387Z -- Configuring done (29.9s)
+2026-10-02T20:21:47.7823784Z -- Generating done (0.2s)
+2026-10-02T20:21:47.7837789Z -- Build files have been written to: D:/a/click-indicator/click-indicator/build
+2026-10-02T20:21:47.8457987Z [0/2] Re-checking globbed directories...
+2026-10-02T20:21:52.7838972Z [1/30] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.obj
+2026-10-02T20:21:53.7979852Z [2/30] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.obj
+2026-10-02T20:21:53.8793027Z [3/30] Building CXX object _deps/arc-build/CMakeFiles/arc.dir/Unity/unity_0_cxx.cxx.obj
+2026-10-02T20:21:54.6982891Z [4/30] Building CXX object _deps/asp2-build/CMakeFiles/asp.dir/Unity/unity_0_cxx.cxx.obj
+2026-10-02T20:21:54.9218793Z [5/30] Linking CXX static library _deps\fmt-build\fmt.lib
+2026-10-02T20:21:54.9874320Z [6/30] Linking CXX static library _deps\asp2-build\asp.lib
+2026-10-02T20:21:55.0493129Z [7/30] Linking CXX static library _deps\arc-build\arc.lib
+2026-10-02T20:21:55.9383770Z [8/30] Running Codegen
+2026-10-02T20:21:57.9623207Z [9/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_13_cxx.cxx.obj
+2026-10-02T20:21:57.9994279Z [10/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_14_cxx.cxx.obj
+2026-10-02T20:21:58.0631649Z [11/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_11_cxx.cxx.obj
+2026-10-02T20:21:59.5500435Z [12/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_12_cxx.cxx.obj
+2026-10-02T20:21:59.6097271Z [13/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_10_cxx.cxx.obj
+2026-10-02T20:22:00.1789491Z [14/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_9_cxx.cxx.obj
+2026-10-02T20:22:01.2063315Z [15/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_8_cxx.cxx.obj
+2026-10-02T20:22:01.3740162Z [16/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_7_cxx.cxx.obj
+2026-10-02T20:22:02.0951985Z [17/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_6_cxx.cxx.obj
+2026-10-02T20:22:03.0462481Z [18/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_5_cxx.cxx.obj
+2026-10-02T20:22:03.2688901Z [19/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_4_cxx.cxx.obj
+2026-10-02T20:22:03.8643936Z [20/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_3_cxx.cxx.obj
+2026-10-02T20:22:04.6086688Z [21/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_2_cxx.cxx.obj
+2026-10-02T20:22:04.9264411Z [22/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_1_cxx.cxx.obj
+2026-10-02T20:22:05.2215152Z [23/30] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_0_cxx.cxx.obj
+2026-10-02T20:22:05.5559166Z [24/30] Linking CXX static library bindings\GeodeBindings.lib
+2026-10-02T20:22:15.2612293Z [25/30] Building CXX object CMakeFiles/ClickIndicator.dir/cmake_pch.hxx.pch
+2026-10-02T20:22:16.7144790Z [26/30] Building CXX object CMakeFiles/ClickIndicator.dir/geode-sdk-clone/entry.cpp.obj
+2026-10-02T20:22:19.5242474Z [27/30] Building CXX object CMakeFiles/ClickIndicator.dir/src/main.cpp.obj
+2026-10-02T20:22:19.5243120Z FAILED: [code=1] CMakeFiles/ClickIndicator.dir/src/main.cpp.obj 
+2026-10-02T20:22:19.5251403Z C:\Users\runneradmin\.cargo\bin\sccache "C:\Program Files\LLVM\bin\clang++.exe" -DARC_FEATURE_TIME=1 -DClickIndicator_EXPORTS -DGEODE_COMP_GD_VERSION=22081 -DGEODE_GD_VERSION=2.2081 -DGEODE_GD_VERSION_STRING=\"2.2081\" -DGEODE_MOD_ID=\"author.click-indicator\" -DMAT_JSON_DYNAMIC=1 -DNOMINMAX -DPROJECT_NAME=ClickIndicator -D_HAS_ITERATOR_DEBUGGING=0 -ID:/a/click-indicator/click-indicator/geode-sdk-clone/loader/include -ID:/a/click-indicator/click-indicator/geode-sdk-clone/loader/include/Geode/cocos/include -ID:/a/click-indicator/click-indicator/geode-sdk-clone/loader/include/Geode/cocos/extensions -ID:/a/click-indicator/click-indicator/geode-sdk-clone/loader/include/Geode/fmod -isystem D:/a/click-indicator/click-indicator/build/bindings/bindings -isystem D:/a/click-indicator/click-indicator/build/_deps/bindings-src/bindings/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/fmt/71b2/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/tuliphook/5f5c/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/result/1b9c/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/json/f349/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/nontype_functional/aaa0/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/asp2/3ace/include -isystem D:/a/click-indicator/click-indicator/cpm-cache/arc/05d9/include -O3 -DNDEBUG -std=gnu++23 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -flto=thin --target=x86_64-pc-windows-msvc -Werror=return-type -Xclang -include-pch -Xclang D:/a/click-indicator/click-indicator/build/CMakeFiles/ClickIndicator.dir/cmake_pch.hxx.pch -Xclang -include -Xclang D:/a/click-indicator/click-indicator/build/CMakeFiles/ClickIndicator.dir/cmake_pch.hxx -MD -MT CMakeFiles/ClickIndicator.dir/src/main.cpp.obj -MF CMakeFiles\ClickIndicator.dir\src\main.cpp.obj.d -o CMakeFiles/ClickIndicator.dir/src/main.cpp.obj -c D:/a/click-indicator/click-indicator/src/main.cpp
+2026-10-02T20:22:19.5260569Z In file included from D:/a/click-indicator/click-indicator/src/main.cpp:2:
+2026-10-02T20:22:19.5267924Z D:/a/click-indicator/click-indicator/build/bindings/bindings\Geode/modify/GJBaseGameLayer.hpp:3453:4: error: static assertion failed due to requirement '!different': Function GJBaseGameLayer::resetLevel cannot be hooked due to an inline definition existing for the function.
+2026-10-02T20:22:19.5269319Z  3453 |                         GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE(GJBaseGameLayer, resetLevel, )
+2026-10-02T20:22:19.5269883Z       |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-10-02T20:22:19.5271162Z D:\a\click-indicator\click-indicator\geode-sdk-clone\loader\include\Geode\modify\Modify.hpp:77:23: note: expanded from macro 'GEODE_APPLY_MODIFY_FOR_FUNCTION_ERROR_INLINE'
+2026-10-02T20:22:19.5272053Z    77 |         static_assert(!different,                                                                             \
+2026-10-02T20:22:19.5272482Z       |                       ^~~~~~~~~~
+2026-10-02T20:22:19.5273510Z D:\a\click-indicator\click-indicator\geode-sdk-clone\loader\include\Geode\modify\Modify.hpp:457:61: note: in instantiation of member function 'geode::modifier::ModifyDerive<ClickIndicatorLayer, GJBaseGameLayer>::apply' requested here
+2026-10-02T20:22:19.5274608Z   457 |         static inline modifier::ModifyDerive<Derived, Base> s_apply;
+2026-10-02T20:22:19.5275009Z       |                                                             ^
+2026-10-02T20:22:19.5275963Z D:\a\click-indicator\click-indicator\geode-sdk-clone\loader\include\Geode\modify\Modify.hpp:459:50: note: in instantiation of static data member 'geode::Modify<ClickIndicatorLayer, GJBaseGameLayer>::s_apply' requested here
+2026-10-02T20:22:19.5277464Z   459 |         static inline auto s_applyRef = &Modify::s_apply;
+2026-10-02T20:22:19.5278043Z       |                                                  ^
+2026-10-02T20:22:19.5278448Z 1 error generated.
+2026-10-02T20:22:19.5279093Z ninja: build stopped: subcommand failed.
+2026-10-02T20:22:19.5372461Z ##[error]Process completed with exit code 1.
+2026-10-02T20:22:19.5381332Z ##[end-action id=build.build;outcome=failure;conclusion=failure;duration_ms=62579]
+2026-10-02T20:22:19.5385033Z ##[start-action display=Upload artifacts;id=build.__actions_upload-artifact]
+2026-10-02T20:22:19.5388805Z ##[end-action id=build.__actions_upload-artifact;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:22:19.5788305Z Post job cleanup.
+2026-10-02T20:22:19.5793661Z ##[start-action display=Setup CPM Cache;id=__33cd5fe6-5d3b-43d7-8748-1977f8c880d0.__actions_cache]
+2026-10-02T20:22:19.5796048Z ##[end-action id=__33cd5fe6-5d3b-43d7-8748-1977f8c880d0.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-02T20:22:19.5798083Z ##[start-action display=Setup sccache;id=__33cd5fe6-5d3b-43d7-8748-1977f8c880d0.__hendrikmuhs_ccache-action]
+2026-10-02T20:22:19.5961391Z Post job cleanup.
+2026-10-02T20:22:19.9150811Z ##[group]sccache stats
+2026-10-02T20:22:19.9969930Z [command]C:\Users\runneradmin\.cargo\bin\sccache.exe -s
+2026-10-02T20:22:20.0152538Z Compile requests                     22
+2026-10-02T20:22:20.0153101Z Compile requests executed            22
+2026-10-02T20:22:20.0153551Z Cache hits                           20
+2026-10-02T20:22:20.0153949Z Cache hits (C/C++)                   20
+2026-10-02T20:22:20.0154359Z Cache misses                          1
+2026-10-02T20:22:20.0154859Z Cache misses (C/C++)                  1
+2026-10-02T20:22:20.0155304Z Cache hits rate                   95.24 %
+2026-10-02T20:22:20.0155751Z Cache hits rate (C/C++)           95.24 %
+2026-10-02T20:22:20.0156186Z Cache timeouts                        0
+2026-10-02T20:22:20.0156604Z Cache read errors                     0
+2026-10-02T20:22:20.0157018Z Forced recaches                       0
+2026-10-02T20:22:20.0157449Z Cache write errors                    0
+2026-10-02T20:22:20.0157882Z Cache errors                          0
+2026-10-02T20:22:20.0158338Z Compilations                          1
+2026-10-02T20:22:20.0159053Z Compilation failures                  1
+2026-10-02T20:22:20.0159527Z Non-cacheable compilations            0
+2026-10-02T20:22:20.0159983Z Non-cacheable calls                   0
+2026-10-02T20:22:20.0160421Z Non-compilation calls                 0
+2026-10-02T20:22:20.0160859Z Unsupported compiler calls            0
+2026-10-02T20:22:20.0161330Z Average cache write               0.038 s
+2026-10-02T20:22:20.0161819Z Average compiler                  6.426 s
+2026-10-02T20:22:20.0162263Z Average cache read hit            0.000 s
+2026-10-02T20:22:20.0164132Z Failed distributed compilations       0
+2026-10-02T20:22:20.0164821Z Cache location                  Local disk: "D:\\a\\click-indicator\\click-indicator\\.sccache"
+2026-10-02T20:22:20.0165506Z Base directories                (none)
+2026-10-02T20:22:20.0165933Z Use direct/preprocessor mode?   yes
+2026-10-02T20:22:20.0166413Z Version (client)                0.14.0
+2026-10-02T20:22:20.0166843Z Cache size                          171 MiB
+2026-10-02T20:22:20.0167307Z Max cache size                       10 GiB
+2026-10-02T20:22:20.0188301Z ##[endgroup]
+2026-10-02T20:22:20.1834643Z Save cache using key "sccache-win-v1-2026-10-02T20:22:20.180Z".
+2026-10-02T20:22:20.2918502Z [command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/click-indicator/click-indicator --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
+2026-10-02T20:22:22.0718224Z Sent 0 of 171081616 (0.0%), 0.0 MBs/sec
+2026-10-02T20:22:23.0699259Z Sent 103972752 of 171081616 (60.8%), 49.2 MBs/sec
+2026-10-02T20:22:23.2017268Z Sent 171081616 of 171081616 (100.0%), 76.0 MBs/sec
+2026-10-02T20:22:23.4538126Z ##[end-action id=__33cd5fe6-5d3b-43d7-8748-1977f8c880d0.__hendrikmuhs_ccache-action;outcome=success;conclusion=success;duration_ms=3873]
+2026-10-02T20:22:23.4747574Z Post job cleanup.
+2026-10-02T20:22:23.6811976Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-02T20:22:23.7116527Z git version 2.55.0.windows.5
+2026-10-02T20:22:23.7202177Z Temporarily overriding HOME='D:\a\_temp\bf6ca389-74f5-4592-b6a6-7e3624f62a9e' before making global git config changes
+2026-10-02T20:22:23.7203186Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-02T20:22:23.7214414Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\click-indicator\click-indicator
+2026-10-02T20:22:23.7560298Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-02T20:22:23.7903520Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-02T20:22:24.4063586Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-02T20:22:24.4362036Z http.https://github.com/.extraheader
+2026-10-02T20:22:24.4417121Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-10-02T20:22:24.4763389Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-02T20:22:25.0873901Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-02T20:22:25.1222338Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-02T20:22:25.7566136Z Cleaning up orphan processes
+2026-10-02T20:22:25.7922341Z Terminate orphan process: pid (5792) (sccache)
+2026-10-02T20:22:25.8041339Z Terminate orphan process: pid (6904) (conhost)
+2026-10-02T20:22:25.8395322Z Terminate orphan process: pid (6880) (vctip)
+2026-10-02T20:22:25.8414255Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

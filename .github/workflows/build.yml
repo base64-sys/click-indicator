@@ -1,0 +1,28 @@
+name: Build Click Indicator
+
+on:
+  workflow_dispatch:        # manual trigger from the Actions tab
+  push:
+    branches: ["**"]        # also build on every push
+
+jobs:
+  build:
+    name: Windows (Win32 – GD 2.2)
+    runs-on: windows-latest   # MSVC + Win32 SDK — the only env that works for GD mods
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build .geode package
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          sdk: latest         # always use the latest stable Geode SDK
+          build-config: Release
+
+      - name: Upload .geode artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: click-indicator-geode
+          path: ${{ steps.build.outputs.build-output }}
+          retention-days: 30
